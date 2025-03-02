@@ -1,28 +1,42 @@
 ```md
-# 🌍 AuthenAPI - Simple Authentication API  
+# 🌍 AuthenAPI - Node.js Authentication API  
 
-A **lightweight, beginner-friendly** authentication API built with Django & Django REST Framework (DRF).  
+A **secure, lightweight authentication API** built with **Node.js, Express, MongoDB, and JWT**.  
 
 ## 🚀 Features  
-- ✅ **User authentication** (JWT-based)  
-- ✅ **User registration & login**  
-- ✅ **Token-based authentication**  
+- ✅ **User registration & login (JWT-based authentication)**  
+- ✅ **Password hashing with bcrypt**  
+- ✅ **Protected routes with token authentication**  
+- ✅ **User profile retrieval**  
 
 ---
 
 ## 🛠️ Installation  
 
+### **1️⃣ Clone the repository**  
 ```bash
 git clone https://github.com/YOUR_GITHUB/AuthenAPI.git
 cd AuthenAPI
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
 ```
 
-API runs at: `http://127.0.0.1:8000/`
+### **2️⃣ Install dependencies**  
+```bash
+npm install
+```
+
+### **3️⃣ Set up environment variables**  
+Create a `.env` file in the root directory and add:  
+```env
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/auth-api
+JWT_SECRET=your_jwt_secret_key
+```
+
+### **4️⃣ Start the server**  
+```bash
+npm start
+```
+The API will run at **`http://localhost:5000/`**.
 
 ---
 
@@ -30,15 +44,51 @@ API runs at: `http://127.0.0.1:8000/`
 
 | Endpoint         | Method | Description |
 |-----------------|--------|-------------|
-| `/api/register/` | POST   | User registration |
-| `/api/login/`   | POST   | User authentication (JWT) |
+| `/api/auth/register` | POST   | User registration |
+| `/api/auth/login`    | POST   | User authentication (JWT) |
+| `/api/auth/profile`  | GET    | Get user profile (requires token) |
 
 🔹 **More APIs coming soon!**  
 
 ---
 
-## 📜 License  
-This project is licensed under the MIT License.  
+## 📝 Usage  
+
+### **🔑 Register a User**  
+```http
+POST /api/auth/register
+Content-Type: application/json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "securepassword"
+}
+```
+
+### **🔑 Login & Get Token**  
+```http
+POST /api/auth/login
+Content-Type: application/json
+{
+  "email": "john@example.com",
+  "password": "securepassword"
+}
+```
+✅ **Response**  
+```json
+{
+  "token": "your_jwt_token"
+}
+```
+
+### **🔒 Access Protected Routes**  
+Send the token in the **Authorization** header:  
+```http
+GET /api/auth/profile
+Authorization: Bearer your_jwt_token
+```
 
 ---
-```
+
+## 📜 License  
+This project is licensed under the MIT License.
