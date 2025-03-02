@@ -1,5 +1,3 @@
-Yes! You can **copy and paste** the following Markdown content directly into your `README.md` file. I've formatted everything properly so it's ready to go. 🚀  
-
 ---
 
 ```md
@@ -73,6 +71,3 @@ This project is licensed under the MIT License.
 
 ---
 ```
-
-✅ **Now just paste this into your `README.md` file and commit it!**  
-Let me know if you want to add anything else. 🚀🔥
