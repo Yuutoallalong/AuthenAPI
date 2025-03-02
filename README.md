@@ -1,17 +1,12 @@
----
-
 ```md
-# 🌍 AuthenAPI - Open Source Authentication & CRUD API  
+# 🌍 AuthenAPI - Simple Authentication API  
 
-A **secure, extensible, and beginner-friendly** authentication API built with Django & DRF. Supports JWT authentication, role-based access, and upcoming CRUD APIs.  
+A **lightweight, beginner-friendly** authentication API built with Django & Django REST Framework (DRF).  
 
-## 🚀 Features
-- ✅ **User authentication** (JWT-based)
-- ✅ **User roles & permissions**
-- ✅ **Email verification & password reset**
-- ✅ **CRUD API for managing user profiles**
-- ✅ **Rate-limiting & security best practices**
-- 🚧 Coming soon: OAuth2 login, Two-Factor Authentication, GraphQL support  
+## 🚀 Features  
+- ✅ **User authentication** (JWT-based)  
+- ✅ **User registration & login**  
+- ✅ **Token-based authentication**  
 
 ---
 
@@ -37,32 +32,8 @@ API runs at: `http://127.0.0.1:8000/`
 |-----------------|--------|-------------|
 | `/api/register/` | POST   | User registration |
 | `/api/login/`   | POST   | User authentication (JWT) |
-| `/api/users/`   | GET    | List users (admin only) |
-| `/api/profile/` | GET    | Get logged-in user details |
 
-🔹 More endpoints coming soon!  
-
----
-
-## 🌍 Contributing  
-
-💡 **We welcome contributions!** Here’s how to get started:  
-
-1️⃣ **Fork** the repository  
-2️⃣ **Clone** your forked repo:  
-```bash
-git clone https://github.com/YOUR_USERNAME/AuthenAPI.git
-```
-3️⃣ **Create a new branch** for your feature:  
-```bash
-git checkout -b feature-branch
-```
-4️⃣ **Commit and push** your changes:  
-```bash
-git commit -m "Added new API feature"
-git push origin feature-branch
-```
-5️⃣ **Create a Pull Request** and wait for review! 🚀  
+🔹 **More APIs coming soon!**  
 
 ---
 
